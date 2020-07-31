@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/hireus", {data:[{}],fetch:[],mutations:void 0});
