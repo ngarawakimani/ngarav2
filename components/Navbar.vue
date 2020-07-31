@@ -1,24 +1,24 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#"><Logo /> <span class="mt-5"></span></a>
+			<a class="navbar-brand" href="/"><Logo /> <span class="mt-5"></span></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarText">
 				<ul class="navbar-nav ml-auto mb-lg-0">
-					<li class="nav-item" v-for="menuItem of menuItems" :key="menuItem" >
-						<a class="nav-link px-4" :class="activeMenuItem(menuItem)" aria-current="page" href="#">{{menuItem}}</a>
+					<li class="nav-item" v-for="menuItem of menuItems" :key="menuItem.name" >
+						<a class="nav-link px-4" :class="activeMenuItem(menuItem)" aria-current="page" :href="menuItem.link" v-smooth-scroll="{ duration: 3000, offset: -50, container: '#home' }">{{menuItem.name}}</a>
 					</li>
 				</ul>
 				<span class="navbar-text ml-5">
 					<ColorModePicker />
 				</span>
-        <span class="text-center text-md-left ml-5" id="navbar_button">
-          <a href="overview.html" class="btn btn-success shadow lift mr-1 px-4 py-2 rounded-5">
-            <i class="fe fe-arrow-right d-none d-md-inline"></i> Get Quote
-          </a>
-        </span>
+				<span class="text-center text-md-left ml-5" id="navbar_button">
+					<a href="/hireus" class="btn btn-success shadow lift mr-1 px-4 py-2 rounded-5">
+						<i class="fe fe-arrow-right d-none d-md-inline"></i> Hire Us
+					</a>
+				</span>
 			</div>
 		</div>
   	</nav>
@@ -26,7 +26,8 @@
 
 <script>
 	import Logo from '@/components/Logo'
-	import ColorModePicker from '@/components/ColorModePicker'
+  import ColorModePicker from '@/components/ColorModePicker'
+
 	export default {
 		components: {
       Logo,
@@ -34,7 +35,20 @@
 		},
 		data () {
 		return {
-			menuItems: ['Home', 'Services', 'Contact Us']
+			menuItems: [
+        {
+          'name' : 'Home',
+          'link' : '#home',
+        },
+        {
+          'name' : 'Services',
+          'link' : '#service-row',
+        },
+        {
+          'name' : 'Contact Us',
+          'link' : '#contact',
+        }
+      ]
 		}
 		},
 		methods: {

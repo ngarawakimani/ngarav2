@@ -11,12 +11,18 @@
     "test": "jest"
   },
   "dependencies": {
+    "@braid/vue-formulate": "^2.4.3",
     "@fortawesome/fontawesome-free": "^5.13.1",
     "@popperjs/core": "^2.4.4",
+    "axios": "^0.19.2",
     "bootstrap": "^5.0.0-alpha1",
     "jquery": "^3.5.1",
     "masonry-layout": "^4.2.2",
-    "nuxt": "^2.13.0"
+    "nuxt": "^2.13.0",
+    "vue-material": "^1.0.0-beta-14",
+    "vue-sweetalert2": "^3.0.6",
+    "vue2-smooth-scroll": "^1.5.0",
+    "vuelidate": "^0.7.5"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^1.0.0",

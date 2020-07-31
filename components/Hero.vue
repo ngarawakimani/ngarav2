@@ -23,8 +23,8 @@
 
           <!-- Buttons -->
           <div class="text-center text-md-left">
-            <a href="overview.html" class="btn btn-success shadow lift mr-1 px-4 py-2 rounded-5 hero-btn">
-              <i class="fe fe-arrow-right d-none d-md-inline ml-3"></i> Talk To Us
+            <a href="/hireus" class="btn btn-success shadow lift mr-1 px-4 py-2 rounded-5 hero-btn">
+              <i class="fe fe-arrow-right d-none d-md-inline ml-3"></i> Hire Us
             </a>
           </div>
 
