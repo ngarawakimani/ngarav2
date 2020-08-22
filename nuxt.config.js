@@ -1,5 +1,17 @@
-
 export default {
+  server: {
+    port: 8080, // default: 3000
+    host: '0.0.0.0' // default: localhost
+  },
+  apps: [
+    {
+      name: 'NgaraWeb',
+      exec_mode: 'cluster',
+      instances: 'max', // Or a number of instances
+      script: './node_modules/nuxt/bin/nuxt.js',
+      args: 'start',
+    },
+  ],
   /*
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
@@ -9,7 +21,7 @@ export default {
   ** Nuxt target
   ** See https://nuxtjs.org/api/configuration-target
   */
-  target: 'static',
+  target: 'server',
   /*
   ** Headers of the page
   ** See https://nuxtjs.org/api/configuration-head

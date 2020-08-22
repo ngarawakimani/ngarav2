@@ -9,7 +9,7 @@
     "export": "nuxt export",
     "serve": "nuxt serve",
     "test": "jest",
-    "generate": "nuxt build && nuxt export"
+    "generate": "nuxt generate"
   },
   "dependencies": {
     "@braid/vue-formulate": "^2.4.3",
