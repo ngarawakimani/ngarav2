@@ -5,7 +5,7 @@
         <div class="col-12 col-md-5 col-lg-6 order-md-2">
 
           <!-- Image -->
-          <img src="../assets/images/undraw_data_reports_706v_.svg" class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0 aos-init aos-animate" alt="..." data-aos="fade-up" data-aos-delay="100">
+          <img src="../assets/images/undraw_data_reports_706v_.svg" class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0 aos-init aos-animate" alt="..." data-aos="fade-up" data-aos-delay="100"/>
 
         </div>
         <div class="col-12 col-md-7 col-lg-6 order-md-1 aos-init aos-animate pt-5" data-aos="fade-up">
@@ -23,9 +23,9 @@
 
           <!-- Buttons -->
           <div class="text-center text-md-left">
-            <a href="/hireus" class="btn btn-success shadow lift mr-1 px-4 py-2 rounded-5 hero-btn">
+            <nuxt-link to="/hireus" class="btn btn-success shadow lift mr-1 px-4 py-2 rounded-5 hero-btn">
               <i class="fe fe-arrow-right d-none d-md-inline ml-3"></i> Hire Us
-            </a>
+            </nuxt-link>
           </div>
 
         </div>

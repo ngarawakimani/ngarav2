@@ -21,7 +21,7 @@
                 </div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-6 mb-4 p-2 ecommerce-service" style="position: absolute; left: 0%; top: 300px;">
+          <div class="col-sm-6 col-lg-6 mb-4 p-2 ecommerce-service" style="position: absolute; left: 0%; top: 340px;">
             <div class="card border-0">
                 <img class="my-4" src="../assets/images/undraw_web_shopping_dd4l.svg" height="70" width="auto" />
               <div class="card-body">
@@ -30,7 +30,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-6 mb-4 p-2 wordpress-service" style="position: absolute; left: 50%; top: 400px;">
+          <div class="col-sm-6 col-lg-6 mb-4 p-2 wordpress-service" style="position: absolute; left: 50%; top: 440px;">
               <div class="card border-0">
                   <img class="my-4" src="../assets/images/undraw_wordpress_utxt.svg" height="70" width="auto" />
                 <div class="card-body">

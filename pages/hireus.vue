@@ -57,10 +57,10 @@
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <select class="form-control selectpicker" v-model.trim="$v.project_amount.$model">
+                  <select class="form-control selectpicker" v-model="$v.project_amount.$model" @change="onProjectAmountChange($event)">
                     <option v-for="project_amount_option of project_amount_options" :key="project_amount_option.name" :value=project_amount_option.name>{{project_amount_option.label}}</option>
-                    <div class="error" v-show="project_amount_validation">Please tell us about your project</div>
                   </select>
+                  <div class="error" v-if="projectAmountIsInvalid">Please tell us about your project's budget</div>
                 </div>
               </div>
             </div>
@@ -119,7 +119,7 @@
         email: '',
         phone: '',
         project_about: '',
-        project_amount_validation: true,
+        projectAmountIsInvalid: false,
         project_amount: 'choose_amount',
         project_amount_options: [
           {
@@ -181,10 +181,20 @@
       }
     },
     methods: {
+      onProjectAmountChange(event){
+        if (event.target.value != 'choose_amount') {
+          this.projectAmountIsInvalid = false;
+        }
+      },
       submit() {
         this.$v.$touch()
-        if (this.$v.$invalid) {
+        if (this.project_amount === 'choose_amount') {
+          this.projectAmountIsInvalid = true;
+        }
+
+        if (this.$v.$invalid && !this.projectAmountIsInvalid) {
           this.submitStatus = 'ERROR'
+          console.log(this.$v.project_amount.$invalid);
         } else {
           //
           this.btnSendLoading = true;

@@ -1,7 +1,7 @@
 export default {
   server: {
-    port: 8080, // default: 3000
-    host: '0.0.0.0' // default: localhost
+    port: 3000, // default: 3000
+    host: 'localhost' // default: localhost
   },
   apps: [
     {
@@ -36,7 +36,8 @@ export default {
     script: [
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap'}
     ]
   },
   /*
@@ -52,6 +53,7 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    {src: '~/plugins/smoothScroll.js', mode: 'client'}
   ],
   /*
   ** Auto import components
